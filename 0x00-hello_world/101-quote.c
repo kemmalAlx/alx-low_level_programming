@@ -3,11 +3,10 @@
 /**
  * main - Entry point
  *
- * Description: using sizeof to print the size of various types.
+ * this function count the string length.
  *
  * Return: Always 0 (Succesful)
 */
-
 
 int ft_strlen(char *str)
 {
@@ -19,6 +18,15 @@ int ft_strlen(char *str)
 	}
 	return (i);
 }
+
+/**
+ * main - Entry point
+ *
+ * Description: print a quote using write function
+ *    ssize_t write(int fd, const void *buf, size_t count);
+ *
+ * Return: This time we return an error 1.
+*/
 
 int main(void)
 {
