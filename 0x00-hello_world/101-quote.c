@@ -7,6 +7,7 @@
  * str is the string
  *
  * @str: input
+ * Return: return length of string
 */
 
 int ft_strlen(char *str)
