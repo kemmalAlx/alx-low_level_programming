@@ -16,7 +16,7 @@ int main(void)
 	{
 		putchar(c);
 		c++;
-		if (c == '9')
+		if (c == ':')
 			c = 'a';
 	}
 	putchar('\n');
