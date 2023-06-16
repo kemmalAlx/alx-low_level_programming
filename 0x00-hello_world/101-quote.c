@@ -1,9 +1,10 @@
 #include <unistd.h>
 
 /**
- * main - Entry point
+ * ft_strlen function
  *
  * this function count the string length.
+ * str is the string
  *
  * Return: Always 0 (Succesful)
 */
