@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer- prints every minute of the day
+ * add- return a + b
 */
 
 int add(int a, int b)
