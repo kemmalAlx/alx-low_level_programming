@@ -10,7 +10,7 @@
  * 		-1 and prints - if n is less than zero
  */
 
-int _isalpha(int c)
+int print_sign(int c)
 {
 	if (c >= 0)
 	{
