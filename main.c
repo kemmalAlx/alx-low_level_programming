@@ -1,7 +1,7 @@
-#include "0x02-functions_nested_loops/main.h"
+#include "0x04-more_functions_nested_loops/main.h"
 
 
-int main()
-{
-	times_table();
+int main(void)                                                                                      
+{                                                                                                   
+        print_numbers();                                        
 }
