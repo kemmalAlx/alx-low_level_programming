@@ -1,7 +1,16 @@
 #include "0x04-more_functions_nested_loops/main.h"
 
-
-int main(void)                                                                                      
-{                                                                                                   
-        print_most_numbers();                                        
+int main(void)
+{
+        print_number(98);
+        _putchar('\n');
+        print_number(402);
+        _putchar('\n');
+        print_number(1024);
+        _putchar('\n');
+        print_number(0);
+        _putchar('\n');
+        print_number(-98);
+        _putchar('\n');
+        return (0);
 }
