@@ -1,12 +1,9 @@
-#include "main.h"
-
 #include"main.h"
 
 /**
  * print_number - prints a number
  *
- * @n: the number
- *
+ * @n: the number to be printed
 */
 
 void print_number(int n)
