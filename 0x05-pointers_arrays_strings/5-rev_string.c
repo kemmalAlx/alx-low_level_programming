@@ -8,7 +8,7 @@
 
 void rev_string(char *s)
 {
-	int i = 0, j = strlen(s) -1, temp;
+	int i = 0, j = strlen(s) - 1, temp;
 	const int fixedLength = strlen(s);
 
 	while (i < fixedLength / 2)
