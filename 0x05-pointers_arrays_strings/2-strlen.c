@@ -4,6 +4,7 @@
  * _strlen - swap two numbers
  *
  * @s: first input
+ * 
  * Return: length of (s)
 */
 
@@ -14,5 +15,5 @@ int _strlen(char *s)
 
 	while (*s++)
 		i++;
-	return i;
+	return (i);
 }
