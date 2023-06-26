@@ -4,7 +4,6 @@
  * _strlen - swap two numbers
  *
  * @s: first input
- * 
  * Return: length of (s)
 */
 
