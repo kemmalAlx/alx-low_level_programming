@@ -8,15 +8,15 @@
 
 void rev_string(char *s)
 {
-	int i = 0, j = 0, temp;
+	int i = 0, j = strlen(s) - 1, temp;
+	const int fixedLength = strlen(s);
 
-	while (s[j++]);
-	j -= 1;
-	while (i < j / 2)
+	while (i < fixedLength / 2)
 	{
 		temp = s[i];
-		s[i] = s[j - i];
-		s[j - i] = temp;
+		s[i] = s[j];
+		s[j] = temp;
 		i++;
+		j--;
 	}
 }
