@@ -3,7 +3,7 @@
 /**
  * _puts - print string str followed by newline
  *
- * @a: first input
+ * @str: the strinpg
 */
 
 void _puts(char *str)
