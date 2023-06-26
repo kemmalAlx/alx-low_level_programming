@@ -1,16 +1,14 @@
-#include "0x04-more_functions_nested_loops/main.h"
+#include "0x05-pointers_arrays_strings/main.h"
 
 int main(void)
 {
-        print_number(98);
-        _putchar('\n');
-        print_number(402);
-        _putchar('\n');
-        print_number(1024);
-        _putchar('\n');
-        print_number(0);
-        _putchar('\n');
-        print_number(-98);
-        _putchar('\n');
-        return (0);
+        int a;
+    int b;
+
+    a = 98;
+    b = 42;
+    printf("a=%d, b=%d\n", a, b);
+    swap_int(&a, &b);
+    printf("a=%d, b=%d\n", a, b);
+    return (0);
 }
