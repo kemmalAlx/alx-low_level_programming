@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * swap_int - swap two numbers
+ * _strlen - swap two numbers
  *
  * @s: first input
- * Return: length of s
+ * Return: length of (s)
 */
 
 
