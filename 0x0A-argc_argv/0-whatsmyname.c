@@ -1,16 +1,19 @@
-#include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main- a program that prints its name
  *
- * @ac: holds the number of arguments passed
- * @av: array pointer that holds the arguments passed
+ * @argc: holds the number of arguments passed
+ * @argv: array pointer that holds the arguments passed
  *
  * Return: Always 0 (Success)
 */
 
-int main(int ac, char **av)
+int main(int __attribute__((unused)) argc, char *argv[])
 {
-	printf("%s\n", av[0]);
+	int i = 0;
+
+	printf("%s\n", argv[i]);
 	return (0);
 }
