@@ -13,7 +13,7 @@
 
 int	main(int ac, char **av)
 {
-	(void)ac;
-	printf("%s\n", av[0]);
+	(void)av;
+	printf("%d\n", ac);
 	return (0);
 }
