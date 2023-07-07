@@ -7,13 +7,13 @@
  * @av: array pointer that holds the arguments passed
  *
  * Return: Always 0 (Success)
-*/
+ */
 
 int main(int ac, char **av)
 {
 	int i = 0;
 
-	while(i < ac)
-		printf("%s\n", av[i++]);
+	while (i < ac)
+		printf("%s\n", av[i]);
 	return (0);
 }
