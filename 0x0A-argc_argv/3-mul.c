@@ -12,6 +12,7 @@
 int main(int ac, char **av)
 {
 	(void)ac;
-	printf("%d\n", atoi(av[1]) * atoi(av[2]));
+	if (ac == 2)
+		printf("%d\n", atoi(av[1]) * atoi(av[2]));
 	return (0);
 }
