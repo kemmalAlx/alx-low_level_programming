@@ -25,7 +25,7 @@ int main(int ac, char **av)
 			}
 			j++;
 		}
-		result += atoi(av[i]); 
+		result += atoi(av[i]);
 		i++;
 	}
 	printf("%d\n", result);
