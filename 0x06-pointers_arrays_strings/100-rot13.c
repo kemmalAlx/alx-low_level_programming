@@ -11,18 +11,18 @@
 
 char *rot13(char *str)
 {
-	int i = 0;
+	int i = 0, j = 0;
+	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'm'
-		|| str[i] >= 'A' && str[i] <= 'M')
-			str[i] += 13;
-		else while (str[i] >= 'N' && str[i] <= 'Z'
-		|| str[i] >= 'n' && str[i] <= 'z')
+		j = 0;
+		while (letters[j])
 		{
-			str[i] -= 13;
-			break;
+			if (str[i] == letters[j])
+				str[i] = rot[j];
+			j++;
 		}
 		i++;
 	}
