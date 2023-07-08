@@ -5,7 +5,7 @@
  *             lowercase letters of a string
  *             to uppercase.
  *
- * @s : pointer to input char
+ * @str : pointer to input char
  *
  * Return: @s
 */
