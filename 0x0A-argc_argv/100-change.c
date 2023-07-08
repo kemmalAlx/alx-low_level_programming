@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * main - a program that prints the minimum number of coins 
+ * main - prints the minimum number of coins to
+ * make change for an amount of money
+ * @ac: number of arguments
+ * @av: array of arguments
  *
- * @ac: holds the number of arguments passed
- * @av: array pointer that holds the arguments passed
- *
- * Return: Always 0 (Success)
-*/
+ * Return: 0 (Success), 1 (Error)
+ */
 
 int main(int ac, char **av)
 {
