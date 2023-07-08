@@ -1,4 +1,4 @@
 #!/bin/bash
 gcc -c *.c
 ar rc libmy.a *.o
-ranlib libamy.a
+ranlib libmy.a
