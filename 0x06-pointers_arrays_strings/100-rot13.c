@@ -13,7 +13,7 @@ char *rot13(char *str)
 {
 	int i = 0, j = 0;
 	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char rot[] =     "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (str[i])
 	{
@@ -21,7 +21,10 @@ char *rot13(char *str)
 		while (letters[j])
 		{
 			if (str[i] == letters[j])
+			{
 				str[i] = rot[j];
+				break;
+			}
 			j++;
 		}
 		i++;
