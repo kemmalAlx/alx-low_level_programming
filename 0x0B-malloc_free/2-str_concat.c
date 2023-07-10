@@ -7,7 +7,7 @@
  * @s2: input to string 2
  *
  * Return: NULL on faliure
- */
+*/
 
 char *str_concat(char *s1, char *s2)
 {
@@ -44,38 +44,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	str[i] = '\0';
 	return (str);
-}
-
-int main(void)
-{
-	char *s;
-
-	s = str_concat("Hello", NULL);
-	if (s == NULL)
-	{
-		printf("failed\n");
-		return (1);
-	}
-	printf("%s\n", s);
-	free(s);
-
-	s = str_concat(NULL, "Hello");
-	if (s == NULL)
-	{
-		printf("failed\n");
-		return (1);
-	}
-	printf("%s\n", s);
-	free(s);
-
-	s = str_concat(NULL, NULL);
-	if (s == NULL)
-	{
-		printf("failed\n");
-		return (1);
-	}
-	printf("%s\n", s);
-	free(s);
-
-	return (0);
 }
