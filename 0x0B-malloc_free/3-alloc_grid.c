@@ -1,4 +1,4 @@
-#include"main.h"
+#include <stdlib.h>
 
 /**
  * alloc_grid - a function that returns a pointer to
@@ -12,22 +12,30 @@
 
 int **alloc_grid(int width, int height)
 {
-	int w = -1, h = -1;
-	int **grid;
+	int **grid, i, j;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	grid = malloc(sizeof(int *) * (width));
-	if (!grid)
+
+	grid = malloc(height * sizeof(int *));
+	if (grid == NULL)
 		return (NULL);
-	while (++w < width)
-		grid[w] = malloc(sizeof(int) * (height));
-	w = -1;
-	while (++w < width)
+
+	for (i = 0; i < height; i++)
 	{
-		h = -1;
-		while (++h < height)
-			grid[w][h] = 0;
+		grid[i] = malloc(width * sizeof(int));
+		if (grid[i] == NULL)
+		{
+			while (i >= 0)
+			{
+				free(grid[i]);
+				i--;
+			}
+			free(grid);
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+			grid[i][j] = 0;
 	}
 	return (grid);
 }
