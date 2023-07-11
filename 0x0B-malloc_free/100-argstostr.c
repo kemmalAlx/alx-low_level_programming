@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 
 	if (!ac || !av)
 		return NULL;
-	sum = 1;
+	sum = 0;
 	i = 0;
 	while (i < ac)
 	{
