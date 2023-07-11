@@ -23,11 +23,11 @@ char *argstostr(int ac, char **av)
 
 	if (!ac || !av)
 		return NULL;
-	sum = 0;
+	sum = 1;
 	i = 0;
 	while (i < ac)
 	{
-		sum += ft_strlen(av[i]);
+		sum += ft_strlen(av[i]) + 1;
 		i++;
 	}
 	concat = malloc(sizeof(char) * (sum + 1));
@@ -52,4 +52,3 @@ char *argstostr(int ac, char **av)
 	concat[size] = '\0';
 	return (concat);
 }
-
