@@ -49,6 +49,7 @@ char *argstostr(int ac, char **av)
 		size++;
 		i++;
 	}
-	concat[size - 1] = '\0';
+	concat[size] = '\0';
 	return (concat);
 }
+
