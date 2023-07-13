@@ -23,14 +23,17 @@ char *set_zero(char *vd, int size)
 }
 
 /**
- * _memset - fills memory with a constant byte
+ * _calloc - a function that allocates
+ *           memory for an array using malloc
  *
- * @s: input pointer that represents memory
- *     block to fill
- * @b: characters to fill
- * @n: number of bytes to be filled
+ *           It is basically the equivalent to
+ *           malloc followed by memset
  *
- * Return: A pointer to the filled memory area
+ * @nmemb: size of array
+ * @size: size of each element
+ *
+ * Return: pointer with new allocated memory
+ *         or NULL if it fails
 */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
