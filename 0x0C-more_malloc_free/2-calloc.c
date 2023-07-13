@@ -10,7 +10,7 @@
  * Return: A pointer to the filled memory area
 */
 
-void set_zero(int *vd, int size)
+char *set_zero(char *vd, int size)
 {
 	int i = 0;
 
@@ -35,14 +35,13 @@ void set_zero(int *vd, int size)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ret;
-	unsigned int i = 0;
+	char *ret;
 
 	if (!nmemb || !size)
 		return (NULL);
 	ret = malloc(size * nmemb);
 	if (!ret)
 		return (NULL);
-	set_zero(ret, nmemb);
+	set_zero(ret, size * nmemb);
 	return (ret);
 }
