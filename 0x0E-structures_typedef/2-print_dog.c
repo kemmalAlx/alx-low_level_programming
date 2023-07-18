@@ -12,8 +12,8 @@ void print_dog(struct dog *d)
 {
 	if (d)
 	{
-		d->name ? puts(d->name) : puts("Name: (nil)");
-		printf("%f\n", d->age);
-		d->owner ? puts(d->owner) : puts("Owner: (nil)");
+		d->name ? printf("Name: %s\n" , d->name) : puts("Name: (nil)");
+		printf("Age: %f\n", d->age);
+		d->owner ? printf("Owner: ", d->owner) : puts("Owner: (nil)");
 	}
 }
