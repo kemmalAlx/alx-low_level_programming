@@ -6,8 +6,9 @@
  * @name: name that printed
  * @f: a function who print the name
  * 
- * Return: NULL
+ * Return: empty if @name or @f is NULL
 */
+
 void print_name(char *name, void (*f)(char *))
 {
 	if (!name || !f)
