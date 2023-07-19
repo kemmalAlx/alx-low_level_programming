@@ -6,7 +6,7 @@
  * @s: The operator
  * @a: first value
  * @b: secont value
- */
+*/
 int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
