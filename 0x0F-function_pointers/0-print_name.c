@@ -3,7 +3,7 @@
 /**
  * print_name - a function that prints a name.
  *
- * @name: name that printed
+ * @name: name to print
  * @f: a function who print the name
  *
  * Return: Always 0 (Success)
