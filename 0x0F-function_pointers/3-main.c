@@ -15,7 +15,8 @@ int main(int ac, char **av)
 		printf("Error\n");
 		return (98);
 	}
-	if (!get_op_func(av[2]) || av[2][1])
+	if ((av[2][0] != '+' && av[2][0] != '-'
+		&& av[2][0] != '*' && av[2][0] != '/' && av[2][0] != '%') || av[2][1])
 	{
 		printf("Error\n");
 		return (99);
