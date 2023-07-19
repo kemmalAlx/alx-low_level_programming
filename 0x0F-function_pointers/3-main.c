@@ -10,7 +10,8 @@
  */
 int main(int ac, char **av)
 {
-	if (ac != 4)
+	if (ac != 4 || atoi(av[1] > 2147483647) || atoi(av[1] < -2147483648)
+		|| atoi(av[2] > 2147483647) || atoi(av[2] < -2147483648))
 	{
 		printf("Error\n");
 		return (98);
