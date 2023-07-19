@@ -7,12 +7,13 @@
  * @size: size of array
  * @action: pointer of a function
  * 
+ * Return: null
 */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t len = 0;
 
-	if (size <= 0)
+	if (size <= 0 || !array || !action)
 		exit(0);
 	while (len != size)
 	{
