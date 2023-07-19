@@ -10,13 +10,15 @@
 */
 int main(int ac, char **av)
 {
-	int nbr1 = atoi(av[1]), nbr2 = atoi(av[3]);
+	int nbr1, nbr2;
 
 	if (ac != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
+	nbr1 = atoi(av[1]);
+	nbr2 = atoi(av[3]);
 	if (!get_op_func(av[2]) || av[2][1])
 	{
 		printf("Error\n");
