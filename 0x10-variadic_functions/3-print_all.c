@@ -49,8 +49,9 @@ void print_float(va_list ap)
 */
 void print_string(va_list ap)
 {
-	char *str = va_arg(ap, char *);
+	char *str;
 
+	str = va_arg(ap, char *);
 	if (!str[0])
 	{
 		printf("(nil)");
