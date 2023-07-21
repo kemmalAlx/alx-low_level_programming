@@ -52,7 +52,7 @@ void print_string(va_list ap)
 	char *str;
 
 	str = va_arg(ap, char *);
-	if (!str[0])
+	if (!str)
 	{
 		printf("(nil)");
 		return;
@@ -79,7 +79,7 @@ void print_all(const char *const format, ...)
 	char *separator = "";
 
 	va_start(ap, format);
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
