@@ -76,6 +76,7 @@ void print_all(const char *const format, ...)
 		{'s', print_string},
 	};
 	int i = 0, j;
+	char *separator = "";
 
 	va_start(ap, format);
 	while (format[i])
@@ -85,9 +86,9 @@ void print_all(const char *const format, ...)
 		{
 			if (format[i] == func[j].symbol)
 			{
+				printf("%s", separator);
 				func[j].print_func(ap);
-				if (format[i] && format[i + 1])
-					printf(", ");
+				separator = ", ";
 			}
 			j++;
 		}
