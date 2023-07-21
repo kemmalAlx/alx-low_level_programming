@@ -62,11 +62,10 @@ void print_all(const char *const format, ...)
 {
 	va_list ap;
 	func_printer func[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL},
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string},
 	};
 	int i = 0, j;
 
@@ -76,7 +75,7 @@ void print_all(const char *const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == *func[j].symbol)
+			if (format[i] == func[j].symbol)
 			{
 				func[j].print_func(ap);
 				if (format[i] && format[i + 1])
