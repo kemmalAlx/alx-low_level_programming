@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    print_all("ceksl", 'B', "stSchool");
+    print_all("ceis", 'B', 3, "stSchool");
     return (0);
 }
