@@ -3,68 +3,58 @@
 /**
  * print_char - print a char
  *
- * @arg: a list of argument pointing
+ * @ap: a list of argument pointing
  *      to the character to be printed
  *
  * Return: nothing
 */
-
-void print_char(va_list arg)
+void print_char(va_list ap)
 {
-	char c = va_arg(arg, int);
-
-	printf("%c", c);
+	printf("%c", va_arg(ap, int));
 }
 
 /**
  * print_int - print an integer
  *
- * @arg: a list of argument pointing
+ * @ap: a list of argument pointing
  *      to the character to be printed
  *
  * Return: nothing
 */
-
-void print_int(va_list arg)
+void print_int(va_list ap)
 {
-	int n = va_arg(arg, int);
-
-	printf("%d", n);
+	printf("%d", va_arg(ap, int));
 }
 
 /**
  * print_float - print a float
  *
- * @arg: a list of argument pointing
+ * @ap: a list of argument pointing
  *      to the character to be printed
  *
  * Return: nothing
 */
-
-void print_float(va_list arg)
+void print_float(va_list ap)
 {
-	float n = va_arg(arg, double);
-
-	printf("%f", n);
+	printf("%f", va_arg(ap, double));
 }
 
 /**
  * print_string - print a string
  *
- * @arg: a list of argument pointing
+ * @ap: a list of argument pointing
  *      to the character to be printed
  *
  * Return: nothing
 */
-
-void print_string(va_list arg)
+void print_string(va_list ap)
 {
-	char *str = va_arg(arg, char *);
+	char *str = va_arg(ap, char *);
 
-	if (str == NULL)
+	if (!str)
 	{
 		printf("(nil)");
-		return;
+		return ;
 	}
 	printf("%s", str);
 }
@@ -74,47 +64,34 @@ void print_string(va_list arg)
  *
  * @format: A string of character representing
  *          the argument types
- *
- * Description: If any argument not of type char,
- *              int, float or char * is ignored
- *
- * Return: nothing
 */
-
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
 	va_list ap;
-	int i = 0, j = 0;
-	char *separator = "";
-	func_printer funcs[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string}
+	func_printer func[] = {
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string},
 	};
+	int i = 0, j;
 
 	va_start(ap, format);
-
-	while (format && format[i])
+	while (format[i])
 	{
 		j = 0;
-		/**
-		 * 4 equals to the number of funcs present
-		 * so if j is less than four and our current
-		 * format is not equal to format in funcs
-		 * then j becomes j + 1
-		 */
-		while (j < 4 && (format[i] != *(funcs[j].symbol)))
-			j++;
-		if (j < 4)
+		while (j < 4)
 		{
-			printf("%s", separator);
-			funcs[j].print_func(ap);
-			separator = ", ";
+			if (format[i] == func[j].symbol)
+			{
+				func[j].print_func(ap);
+				if (format[i] && format[i + 1])
+					printf(", ");
+			}
+			j++;
 		}
 		i++;
 	}
-	printf("\n");
-
 	va_end(ap);
+	printf("\n");
 }
