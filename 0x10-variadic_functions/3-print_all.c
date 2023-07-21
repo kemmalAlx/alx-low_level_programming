@@ -45,7 +45,7 @@ void print_all(const char *const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == func[j].symbol[0])
+			if (format[i] == *func[j].symbol)
 			{
 				func[j].print_func(ap);
 				if (format[i] && format[i + 1])
