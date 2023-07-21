@@ -73,16 +73,15 @@ void print_all(const char *const format, ...)
 	while (format[i])
 	{
 		j = 0;
-		while (j < 4)
+		while (j < 4 && format[i] != func[j].symbol)
 		{
-			if (format[i] == func[j].symbol)
-			{
-				func[j].print_func(ap);
-				if (format[i] && format[i + 1])
-					printf(", ");
-			}
 			j++;
 		}
+			if (j < 4)
+			{
+				func[j].print_func(ap);
+				printf(", ");
+			}
 		i++;
 	}
 	va_end(ap);
