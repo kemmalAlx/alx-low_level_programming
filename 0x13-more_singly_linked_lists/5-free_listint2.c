@@ -9,14 +9,19 @@ void free_listint2(listint_t **head)
 {
 	listint_t *current, *temp;
 
-	if (head)
+	if (head != NULL)
 	{
-		temp = *head;
-		while (temp)
+		current = *head;
+
+		temp = current;
+		while (temp != NULL)
 		{
-			current = temp;
-			temp = temp->next;
-			free(current);
+			/*set next node to curretnt*/
+			current = current->next;
+			/*free temp, that is the current node*/
+			free(temp);
 		}
+
+		*head = NULL;
 	}
 }
