@@ -12,14 +12,14 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int w, fd, text_len = 0;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 	fd = open(filename, O_APPEND | O_WRONLY);
 	if (fd == -1)
 		return (-1);
-	if (text_len)
+	if (text_content)
 	{
-		while (text_content[text_len] != '\0')
+		while (text_content[text_len])
 			text_len++;
 		w = write(fd, text_content, text_len);
 		if (w == -1)
