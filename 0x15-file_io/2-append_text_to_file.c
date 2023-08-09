@@ -10,27 +10,21 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int file, app_status, words = 0;
+	int w, fd, text_len = 0;
 
-	if (filename == NULL) /*check if file is present*/
+	if (filename == NULL)
 		return (-1);
-
-	/*open file, with append option with write rights*/
-	file = open(filename, O_APPEND | O_WRONLY);
-	if (file == -1) /*check if file is present*/
+	fd = open(filename, O_APPEND | O_WRONLY);
+	if (fd == -1)
 		return (-1);
-
-	if (text_content) /*append content to file if its not NULL*/
+	if (text_len)
 	{
-		while (text_content[words] != '\0') /*find number of words*/
-			words++;
-
-		/*append to file*/
-		app_status = write(file, text_content, words);
-		if (app_status == -1) /*check if append was a success*/
+		while (text_content[text_len] != '\0')
+			text_len++;
+		w = write(fd, text_content, text_len);
+		if (w == -1)
 			return (-1);
 	}
-
-	close(file); /*close file*/
+	close(fd);
 	return (1);
 }
