@@ -20,7 +20,6 @@ int _strlen(char *str)
  * print_err - a function printed the error
  *
  * @err: the number to exit
- * @msg: the message to be printed
  * @file_name: name of the file
  * @fd: file descriptor
 */
