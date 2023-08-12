@@ -12,20 +12,20 @@ void print_err(int err, char *file_name, int fd)
 	switch (err)
 	{
 	case 97:
-		dprintf(2, "%s %s\n", "Usage: cp file_from file_to ", file_name);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(err);
 		break;
 	case 98:
-		dprintf(2, "%s\n", "Error: Can't read from file");
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_name);
+		exit(err);
 		break;
 	case 99:
-		dprintf(2, "%s %s\n", "Error: Can't write to ", file_name);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_name);
 		exit(err);
 		break;
 	case 100:
-		dprintf(2, "%s %d\n", "Error: Can't close fd", fd);
-		exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(err);
 	default:
 		break;
 	}
