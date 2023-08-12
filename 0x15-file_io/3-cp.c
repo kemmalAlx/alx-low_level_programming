@@ -1,22 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - a function counted the length of string
- *
- * @str: the string to be counted
- *
- * Return: length of string
-*/
-int _strlen(char *str)
-{
-	int i = 0;
-
-	while (str[i])
-		i++;
-	return (i);
-}
-
-/**
  * print_err - a function printed the error
  *
  * @err: the number to exit
@@ -72,7 +56,7 @@ int main(int ac, char **av)
 	{
 		if (read_in == -1)
 			print_err(98, fil_in, 0);
-		write_out = write(fd_out, buffer, _strlen(buffer));
+		write_out = write(fd_out, buffer, read_in);
 		if (write_out == -1)
 			print_err(99, file_out, 0);
 	}
