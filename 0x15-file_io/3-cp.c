@@ -68,7 +68,7 @@ int main(int ac, char **av)
 	buffer = malloc(sizeof(char) * 1024);
 	if (!buffer)
 		return (-1);
-	fd_out = open(file_out, O_CREAT | O_WRONLY, 0664);
+	fd_out = open(file_out, O_CREAT | O_WRONLY, 0604);
 	if (fd_out == -1)
 		print_err(99, file_out, 0);
 	while ((read_in = read(fd_in, buffer, 1024)))
