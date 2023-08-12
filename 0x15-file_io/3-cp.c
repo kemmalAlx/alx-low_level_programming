@@ -76,7 +76,6 @@ int main(int ac, char **av)
 		if (write_out == -1)
 			print_err(99, file_out, 0);
 	}
-	free(buffer);
 	close_in = close(fd_in);
 	close_out = close(fd_out);
 	if (close_in)
