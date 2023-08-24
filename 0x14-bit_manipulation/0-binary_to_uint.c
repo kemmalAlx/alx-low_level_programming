@@ -35,7 +35,7 @@ unsigned int _atoi(char c)
  * @b: string that contains 0 and 1 characters
  *
  * Return: the converted number or 0 if one or more chars
- * 	in the string or b if is null
+ * in the string or b if is null
 */
 unsigned int binary_to_uint(const char *b)
 {
@@ -53,5 +53,4 @@ unsigned int binary_to_uint(const char *b)
 		base2 *= 2;
 	}
 	return (result);
-
 }
